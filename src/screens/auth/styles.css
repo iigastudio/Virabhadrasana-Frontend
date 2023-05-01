@@ -1,0 +1,31 @@
+.halfSide {
+  height: 100vh;
+  flex:1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 0px solid black;
+}
+.authContainer{
+    display: flex;
+    flex-direction: row;
+    background-color: white;
+}
+
+.authBox{
+   
+    background-color: #193718;
+    padding: 20px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+}
+
+.inputStyle{
+    border: 1px solid pink;
+}
+.inputLabel{
+    text-align: center;
+}
