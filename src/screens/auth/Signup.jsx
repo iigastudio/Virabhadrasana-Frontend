@@ -6,19 +6,17 @@ function Signup() {
     <div className="authContainer">
       
       <div className="halfSide">
-        <img style={{height:"60%"}} src={warrior1} ></img>
-      </div>
-      <div className="halfSide">
-      <div className="authBox">
-        <p className="inputLabel">Username</p>
-        <input className="inputStyle" />
-        <p className="inputLabel">Username</p>
-        <input className="inputStyle" />
-        <p className="inputLabel">Username</p>
-        <input className="inputStyle" />
-
-        <div className="inputLabel">Submit</div>
-      </div>
+        <img style={{height:"50%"}} src={warrior1} ></img>
+        <div className="halfSide">
+  <div className="authBox">
+    <p className="inputLabel">Username</p>
+    <input className="inputStyle" />
+    <p className="inputLabel">Password</p>
+    <input className="inputStyle" />
+    <p className="inputLabel">Submit</p>
+    <input className="inputStyle" />
+  </div>
+</div>
       </div>
     </div>
   );
