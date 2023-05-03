@@ -1,6 +1,6 @@
   :root {
-    --clr-primary: #143aa2;
-    --clr-secondary: #3e8de3;
+    --clr-primary: #fad3bc;
+    --clr-secondary: rgb(176,93,65);
     --clr-dark: #02081d;
     --clr-white: #fff;
 
@@ -216,9 +216,16 @@
     font-size: var(--fs-small);
     font-weight: 700;
   }
+  
   .button-primary {
     background-color: var(--clr-primary);
   }
+  .button-primary:hover {
+    cursor: pointer;
+   } 
+   .button-secondary:hover {
+    cursor: pointer;
+   }
 
   .button-secondary {
     background-color: var(--clr-secondary);
