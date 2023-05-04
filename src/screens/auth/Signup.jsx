@@ -3,7 +3,7 @@ import warrior1 from "../../assets/warrior1.jpg";
 import "./styles.css";
 import { useState } from "react";
 import axios from "axios";
-function Signup() {
+function SignUp() {
   const [userName, setUserName] = useState("");
   const [fullName, setFullName] = useState("");
   const [password, setPassword] = useState("");
@@ -22,7 +22,7 @@ function Signup() {
   return (
     <div className="authContainer">
       <div className="halfSide">
-        <img style={{ height: "50%" }} src={warrior1}></img>
+        <img style={{ height: "80%" }} src={warrior1}></img>
       </div>
       <div className="halfSide rightSide">
         <div className="authBox">
@@ -42,7 +42,7 @@ function Signup() {
             className="inputStyle"
           />
           <label className="inputLabel" for="cars">
-            Role:
+            SelectRole
           </label>
 
           <select
@@ -50,11 +50,11 @@ function Signup() {
             name="role"
             id="roles"
           >
-                <option value="USER">USER</option>
+                <option value="USER">User</option>
             <option value="ADMIN">Admin</option>
         
           </select>
-          <p onClick={()=>onSubmit()} style={{ alignSelf: "center" }} className="button-secondary">
+          <p onClick={()=>onSubmit()}  className="submit-btn btnclick bg-secondary">
             Submit
           </p>
         </div>
@@ -63,4 +63,4 @@ function Signup() {
   );
 }
 
-export default Signup;
+export default SignUp;

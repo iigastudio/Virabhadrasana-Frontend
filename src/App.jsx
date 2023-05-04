@@ -1,10 +1,21 @@
 import React from "react";
-import Signup from "./screens/auth/Signup";
+import SignUp from "./screens/auth/SignUp";
+import {
+  createBrowserRouter,
+  RouterProvider,
+} from "react-router-dom";
+import SignIn from "./screens/auth/Signin";
+import useBrowserRouter from "./routing/useBrowserRouter";
+
+
+
+
+const router = useBrowserRouter()
 
 function App() {
   return (
     <div>
-      <Signup/>
+      <RouterProvider router={router} />
     </div>
   );
 }

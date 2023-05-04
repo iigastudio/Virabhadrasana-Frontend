@@ -67,7 +67,7 @@
     min-height: 100vh;
     position: relative;
     font-family: var(--ff-primary);
-    color: #ff8bff;
+    color: white;
     background-color: #193718;
     z-index: -1;
   }
@@ -111,14 +111,9 @@
   }
 
   select {
-    background: url("data:image/svg+xml,<svg height='10px' width='10px' viewBox='0 0 16 16' fill='%23000000' xmlns='http://www.w3.org/2000/svg'><path d='M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z'/></svg>")
-      no-repeat;
-    background-position: calc(100% - 0.5rem) center !important;
-    -moz-appearance: none !important;
-    -webkit-appearance: none !important;
-    appearance: none !important;
-    padding-left: inherit;
-    padding-right: 2rem !important;
+   height: 30px;
+   border-radius: 10px;
+   border-color: white;
   }
 
   /* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
@@ -204,7 +199,8 @@
   }
   .button-primary,
   .button-secondary {
-    height: 43px;
+    height: 35px;
+    width: 40px;
     padding-inline: 20px;
     display: flex;
     justify-content: center;
@@ -218,7 +214,7 @@
   }
   
   .button-primary {
-    background-color: var(--clr-primary);
+    background-color: white;
   }
   .button-primary:hover {
     cursor: pointer;
