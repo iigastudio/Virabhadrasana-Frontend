@@ -1,43 +1,56 @@
 .halfSide {
-  height: 100vh;
-  flex:1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border: 0px solid black;
-}
-.authContainer{
+    height: 100vh;
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    background-color: white;
+    align-items: center;
+  }
+  .authContainer {
     display: flex;
     flex-direction: row;
-    background-color: white;
+    background-color: #b05d41bf;
     
-}
-.rightSide{
-    box-shadow: -29px -1px 38px -7px rgba(250,211,188,0.75);
-    -webkit-box-shadow: -29px -1px 38px -7px rgba(250,211,188,0.75);
-    -moz-box-shadow: -29px -1px 38px -7px rgba(250,211,188,0.75);
+  }
+  .rightSide {
+    box-shadow: -29px -1px 38px -7px rgba(250, 211, 188, 0.75);
+    -webkit-box-shadow: -29px -1px 38px -7px rgba(250, 211, 188, 0.75);
+    -moz-box-shadow: -29px -1px 38px -7px rgba(250, 211, 188, 0.75);
     background-color: #fad3bc;
-}
-.authBox{
-  min-height: 300px;
-    background-color:#fff;
+  }
+  .authBox {
+    min-height: 300px;
+    background-color: #b05d41bf;
     padding: 20px;
-    border-radius: 10px;
+    border-radius: 15px;
     display: flex;
+    width: 40%;
+    padding-inline: 40px;
     flex-direction: column;
-    box-shadow: -2px 1px 30px 9px rgba(176,93,65,0.75);
-    -webkit-box-shadow: -2px 1px 30px 9px rgba(176,93,65,0.75);
-    -moz-box-shadow: -2px 1px 30px 9px rgba(176,93,65,0.75);
+    box-shadow: -2px 1px 30px 9px #b05d41bf;
+    -webkit-box-shadow: -2px 1px 30px 9px #b05d41bf;
+    -moz-box-shadow: -2px 1px 30px 9px #b05d41bf;
     gap: 10px;
-
-}
-
-.inputStyle{
-    border: 1px solid rgb(26, 25, 25);
-   border-radius: 5px;
-    
-}
-.inputLabel{
+  }
+  
+  .inputStyle {
+    border: 1px solid white;
+    border-radius: 10px;
+  }
+  .inputLabel {
     text-align: center;
-    color:rgb(26, 25, 25)
-}
+    color: white;
+    font-weight: bold;
+  }
+  .submit-btn:hover{
+      cursor: pointer;
+  }
+  .submit-btn {
+    height: 30px;
+    width: 100%;
+    align-self: center;
+    text-align: center;
+    border-radius: 10px;
+    margin-top: 20px;
+    font-weight: bold;
+  }

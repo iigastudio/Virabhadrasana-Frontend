@@ -1,271 +1,270 @@
-  :root {
-    --clr-primary: #fad3bc;
-    --clr-secondary: rgb(176,93,65);
-    --clr-dark: #02081d;
-    --clr-white: #fff;
+:root {
+  --clr-primary: #fad3bc;
+  --clr-secondary: rgb(176,93,65);
+  --clr-dark: #02081d;
+  --clr-white: #fff;
 
-    --ff-primary: "Montserrat", sans-serif;
+  --ff-primary: "Montserrat", sans-serif;
 
-    --fs-extra-small: 0.8125rem;
-    --fs-small: 0.875rem;
-    --fs-medium: 0.9375rem;
-    --fs-large: 1.375rem;
-    --fs-extra: 2.125rem;
-    --p-horizontal: clamp(10px, 7.5vw, 110px);
+  --fs-extra-small: 0.8125rem;
+  --fs-small: 0.875rem;
+  --fs-medium: 0.9375rem;
+  --fs-large: 1.375rem;
+  --fs-extra: 2.125rem;
+  --p-horizontal: clamp(10px, 7.5vw, 110px);
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 2px grey;
+  border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #143aa2;
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #3e8de3;
+}
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+
+* {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+}
+.pointer:hover {
+  cursor: pointer;
+}
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+html,
+body {
+  min-height: 100vh;
+  position: relative;
+  font-family: var(--ff-primary);
+  color: white;
+  background-color: #193718;
+  z-index: -1;
+}
+/* Set core body defaults */
+body {
+  text-rendering: optimizeSpeed;
+  line-height: 1.8;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+.btnclick:hover {
+  box-shadow: 0 0 5px var(--clr-secondary);
+}
+.btnclick:active {
+  opacity: 0.6;
+}
+
+
+
+/* Make images easier to work with */
+img,
+picture,
+svg {
+  max-width: 100%;
+  display: block;
+}
+
+width
+width 
+width
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+select {
+ height:30px;
+ border-radius: 10px;
+ border-color: white;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
   }
 
-  ::-webkit-scrollbar {
-    width: 10px;
-  }
-
-  /* Track */
-  ::-webkit-scrollbar-track {
-    box-shadow: inset 0 0 2px grey;
-    border-radius: 10px;
-  }
-
-  /* Handle */
-  ::-webkit-scrollbar-thumb {
-    background: #143aa2;
-    border-radius: 10px;
-  }
-
-  /* Handle on hover */
-  ::-webkit-scrollbar-thumb:hover {
-    background: #3e8de3;
-  }
-
-  /* Box sizing rules */
   *,
   *::before,
   *::after {
-    box-sizing: border-box;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
   }
+}
 
-  /* Remove default margin */
+.bg-primary {
+  background-color: var(--clr-primary);
+}
+.bg-secondary {
+  background-color: var(--clr-secondary);
+}
+.bg-dark {
+  background-color: var(--clr-dark);
+}
+.bg-white {
+  background-color: var(--clr-white);
+}
 
-  * {
-    margin: 0;
-    padding: 0;
-    font: inherit;
-  }
-  .pointer:hover {
-    cursor: pointer;
-  }
-  /* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
-  ul[role="list"],
-  ol[role="list"] {
-    list-style: none;
-  }
+.fw-500 {
+  font-weight: 400;
+}
+.fw-600 {
+  font-weight: 500;
+}
+.fw-700 {
+  font-weight: 600;
+}
+.fw-800 {
+  font-weight: 700;
+}
+.fs-extra-small {
+  font-size: var(--fs-extra-small);
+}
+.fs-small {
+  font-size: var(--fs-small);
+}
+.fs-medium {
+  font-size: var(--fs-medium);
+}
+.fs-large {
+  font-size: var(--fs-large);
+}
+.fs-extra {
+  font-size: var(--fs-extra);
+}
 
-  /* Set core root defaults */
-  html:focus-within {
-    scroll-behavior: smooth;
-  }
-  html,
-  body {
-    min-height: 100vh;
-    position: relative;
-    font-family: var(--ff-primary);
-    color: white;
-    background-color: #193718;
-    z-index: -1;
-  }
-  /* Set core body defaults */
-  body {
-    text-rendering: optimizeSpeed;
-    line-height: 1.8;
-  }
+.mv-10 {
+  margin-block: 10px;
+}
+.mv-20 {
+  margin-block: 20px;
+}
+.mv-30 {
+  margin-block: 30px;
+}
+.mh-10 {
+  margin-inline: 10px;
+}
+.mh-20 {
+  margin-inline: 20px;
+}
+.mh-30 {
+  margin-inline: 30px;
+}
+.border-primary {
+  border: 2px solid var(--clr-primary);
+}
+.border-secondary {
+  border: 2px solid var(--clr-secondary);
+}
+.button-primary,
+.button-secondary {
+  height: 43px;
+  padding-inline: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  color: var(--clr-white);
+  text-align: center;
+  width: fit-content;
+  font-size: var(--fs-small);
+  font-weight: 700;
+}
 
-  /* A elements that don't have a class get default styles */
-  a:not([class]) {
-    text-decoration-skip-ink: auto;
-  }
-  .btnclick:hover {
-    box-shadow: 0 0 5px var(--clr-secondary);
-  }
-  .btnclick:active {
-    opacity: 0.6;
-  }
+.button-primary {
+  background-color: var(--clr-primary);
+}
+.button-primary:hover {
+  cursor: pointer;
+ } 
+ .button-secondary:hover {
+  cursor: pointer;
+ }
 
+.button-secondary {
+  background-color: var(--clr-secondary);
+}
+.react-datepicker__month-read-view--down-arrow {
+  top: 6px !important;
+}
+.react-datepicker__year-read-view--down-arrow {
+  top: 6px !important;
+}
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
+.margin-horizontal {
+  margin-inline: var(--p-horizontal);
+}
+.input-err {
+  font-size: var(--fs-small);
+  color: red;
+}
 
-  /* Make images easier to work with */
-  img,
-  picture,
-  svg {
-    max-width: 100%;
-    display: block;
+@media (max-width: 800px) {
+  :root {
+    --fs-extra-small: 0.625rem;
+    --fs-small: 0.6875rem;
+    --fs-medium: 0.75rem;
+    --fs-large: 1rem;
+    --fs-extra: 1.625rem;
   }
-
-  width
-  width 
-  width
-
-  /* Inherit fonts for inputs and buttons */
-  input,
-  button,
-  textarea,
-  select {
-    font: inherit;
-  }
-
-  select {
-   height: 30px;
-   border-radius: 10px;
-   border-color: white;
-  }
-
-  /* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
-  @media (prefers-reduced-motion: reduce) {
-    html:focus-within {
-      scroll-behavior: auto;
-    }
-
-    *,
-    *::before,
-    *::after {
-      animation-duration: 0.01ms !important;
-      animation-iteration-count: 1 !important;
-      transition-duration: 0.01ms !important;
-      scroll-behavior: auto !important;
-    }
-  }
-
-  .bg-primary {
-    background-color: var(--clr-primary);
-  }
-  .bg-secondary {
-    background-color: var(--clr-secondary);
-  }
-  .bg-dark {
-    background-color: var(--clr-dark);
-  }
-  .bg-white {
-    background-color: var(--clr-white);
-  }
-
-  .fw-500 {
-    font-weight: 400;
-  }
-  .fw-600 {
-    font-weight: 500;
-  }
-  .fw-700 {
-    font-weight: 600;
-  }
-  .fw-800 {
-    font-weight: 700;
-  }
-  .fs-extra-small {
-    font-size: var(--fs-extra-small);
-  }
-  .fs-small {
-    font-size: var(--fs-small);
-  }
-  .fs-medium {
-    font-size: var(--fs-medium);
-  }
-  .fs-large {
-    font-size: var(--fs-large);
-  }
-  .fs-extra {
-    font-size: var(--fs-extra);
-  }
-
-  .mv-10 {
-    margin-block: 10px;
-  }
-  .mv-20 {
-    margin-block: 20px;
-  }
-  .mv-30 {
-    margin-block: 30px;
-  }
-  .mh-10 {
-    margin-inline: 10px;
-  }
-  .mh-20 {
-    margin-inline: 20px;
-  }
-  .mh-30 {
-    margin-inline: 30px;
-  }
-  .border-primary {
-    border: 2px solid var(--clr-primary);
-  }
-  .border-secondary {
-    border: 2px solid var(--clr-secondary);
-  }
-  .button-primary,
-  .button-secondary {
-    height: 35px;
-    width: 40px;
-    padding-inline: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 10px;
-    color: var(--clr-white);
-    text-align: center;
-    width: fit-content;
-    font-size: var(--fs-small);
-    font-weight: 700;
-  }
-  
-  .button-primary {
-    background-color: white;
-  }
-  .button-primary:hover {
-    cursor: pointer;
-   } 
-   .button-secondary:hover {
-    cursor: pointer;
-   }
-
-  .button-secondary {
-    background-color: var(--clr-secondary);
-  }
-  .react-datepicker__month-read-view--down-arrow {
-    top: 6px !important;
-  }
-  .react-datepicker__year-read-view--down-arrow {
-    top: 6px !important;
-  }
-  .flex-center {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .margin-horizontal {
-    margin-inline: var(--p-horizontal);
-  }
-  .input-err {
-    font-size: var(--fs-small);
-    color: red;
-  }
-
-  @media (max-width: 800px) {
-    :root {
-      --fs-extra-small: 0.625rem;
-      --fs-small: 0.6875rem;
-      --fs-medium: 0.75rem;
-      --fs-large: 1rem;
-      --fs-extra: 1.625rem;
-    }
-  }
+}
 
 @media (max-width: 600px) {
-  :root {
-    --fs-large: 0.75rem;
-    --fs-extra: 0.8rem;
-  }
-  .button-primary,
-  .button-secondary {
-    height: 30px;
-    padding-inline: 15px;
-  }
-  
-  
+:root {
+  --fs-large: 0.75rem;
+  --fs-extra: 0.8rem;
+}
+.button-primary,
+.button-secondary {
+  height: 30px;
+  padding-inline: 15px;
+}
+
+
 }
