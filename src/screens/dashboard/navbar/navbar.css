@@ -4,6 +4,17 @@
     background-color: var(--clr-secondary);
     align-items: center;
  padding-inline:30px;
- gap:15px;
+ gap:30px;
     display: flex;
+}
+.nav-item:hover{
+cursor: pointer;
+}
+.nav-item{
+    color: white;
+}
+.login-register-container{
+    display: flex;
+    flex-direction: row;
+    gap:15px
 }

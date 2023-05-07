@@ -8,6 +8,9 @@ import React from "react";
 import SignUp from "../screens/auth/SignUp";
 import SignIn from "../screens/auth/Signin";
 import Dashboard from "../screens/dashboard/Dashboard";
+import Home from "../screens/dashboard/Home";
+import Administration from "../screens/dashboard/Administration";
+import WarriorPoses from "../screens/dashboard/WarriorPoses";
 
 const useBrowserRouter = () => {
   const router = createBrowserRouter(
@@ -17,8 +20,12 @@ const useBrowserRouter = () => {
         <Route path="/signup" element={<SignUp />} />
         <Route path="/signin" element={<SignIn />} />
         <Route path="/dashboard" element={<Dashboard />}>
-          <Route path="/dashboard/signup1" element={<SignUp />} />
-          <Route path="/dashboard/signin1" element={<SignIn />} />
+          <Route path="/dashboard/home" element={<Home />} />
+          <Route
+            path="/dashboard/administration"
+            element={<Administration />}
+          />
+          <Route path="/dashboard/warrior-poses" element={<WarriorPoses />} />Ï
         </Route>
       </Route>
     )
