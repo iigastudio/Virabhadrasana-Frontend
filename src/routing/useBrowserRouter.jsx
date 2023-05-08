@@ -8,7 +8,7 @@ import React from "react";
 import SignUp from "../screens/auth/SignUp";
 import SignIn from "../screens/auth/Signin";
 import Dashboard from "../screens/dashboard/Dashboard";
-import Home from "../screens/dashboard/Home";
+import Home from "../screens/dashboard/home/Home";
 import Administration from "../screens/dashboard/Administration";
 import WarriorPoses from "../screens/dashboard/WarriorPoses";
 
@@ -20,6 +20,7 @@ const useBrowserRouter = () => {
         <Route path="/signup" element={<SignUp />} />
         <Route path="/signin" element={<SignIn />} />
         <Route path="/dashboard" element={<Dashboard />}>
+          <Route index element={<Home />} />
           <Route path="/dashboard/home" element={<Home />} />
           <Route
             path="/dashboard/administration"

@@ -1,9 +1,7 @@
-import React from 'react'
+import React from "react";
 
 function Administration() {
-  return (
-    <div style={{color:"black"}}>Administration</div>
-  )
+  return <div style={{ color: "black" }}>Administration</div>;
 }
 
-export default Administration
+export default Administration;

@@ -2,6 +2,7 @@
   --clr-primary: #fad3bc;
   --clr-secondary: rgb(176, 93, 65);
   --ff-primary: "Montserrat", sans-serif;
+ 
 }
 
 /* Remove default margin */
@@ -11,12 +12,17 @@
   padding: 0;
   font: inherit;
 }
-
-/* Set core root defaults */
+.align-row
+{
+display: flex;
+flex-direction: row;
+gap: 15px;
+}/* Set core root defaults */
 html:focus-within {
   scroll-behavior: smooth;
 }
 html,
+root,
 body {
   min-height: 100vh;
   position: relative;

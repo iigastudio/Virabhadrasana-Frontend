@@ -1,10 +1,12 @@
-import React from 'react'
-import { Outlet } from 'react-router-dom'
+import React from "react";
+import { Outlet } from "react-router-dom";
 
 function Main() {
   return (
-    <Outlet/>
-  )
+    <div style={{ minHeight: "100vh" }}>
+      <Outlet />
+    </div>
+  );
 }
 
-export default Main
+export default Main;

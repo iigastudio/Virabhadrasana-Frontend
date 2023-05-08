@@ -1,0 +1,25 @@
+.warrior-pose-card-container {
+  width: 28%;
+  height: 100%;
+  margin: 1%;
+  border: 1px solid black;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+}
+.variation-container {
+  align-self: flex-end;
+  justify-self: flex-end;
+}
+.home-big-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  height: 80vh;
+}
+.single-variation {
+  border: 1px solid black;
+  margin: 10px;
+  padding: 10px;
+  border-radius: 10px;
+}

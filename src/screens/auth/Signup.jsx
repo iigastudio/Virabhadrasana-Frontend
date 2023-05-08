@@ -3,21 +3,26 @@ import warrior1 from "../../assets/warrior1.jpg";
 import "./styles.css";
 import { useState } from "react";
 import axios from "axios";
+import { useNavigate } from "react-router-dom";
 function SignUp() {
   const [userName, setUserName] = useState("");
   const [fullName, setFullName] = useState("");
   const [password, setPassword] = useState("");
   const [role, setRole] = useState("USER");
-
+  const navigate = useNavigate();
   function onSubmit() {
-    axios.post("http://localhost:8090/register",{
-      username: userName,
-      fullName,
-      password: password,
-      userRole: role,
-    }).then((result)=>alert("User added succesffully")).catch((err)=>alert("something wrong happend"))
-   
-    
+    axios
+      .post("http://localhost:8090/register", {
+        username: userName,
+        fullName,
+        password: password,
+        userRole: role,
+      })
+      .then((result) => {
+        alert("User added succesffully");
+        navigate("/signin");
+      })
+      .catch((err) => alert("something wrong happend"));
   }
   return (
     <div className="authContainer">
@@ -38,6 +43,7 @@ function SignUp() {
           />
           <p className="inputLabel">Password</p>
           <input
+            type="password"
             onChange={(e) => setPassword(e.target.value)}
             className="inputStyle"
           />
@@ -50,11 +56,13 @@ function SignUp() {
             name="role"
             id="roles"
           >
-                <option value="USER">User</option>
+            <option value="USER">User</option>
             <option value="ADMIN">Admin</option>
-        
           </select>
-          <p onClick={()=>onSubmit()}  className="submit-btn btnclick bg-secondary">
+          <p
+            onClick={() => onSubmit()}
+            className="submit-btn btnclick bg-secondary"
+          >
             Submit
           </p>
         </div>

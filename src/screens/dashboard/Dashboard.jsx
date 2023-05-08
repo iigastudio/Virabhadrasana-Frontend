@@ -5,7 +5,7 @@ import NavBar from "./navbar/NavBar";
 function Dashboard() {
   return (
     <div>
-      <NavBar/>
+      <NavBar />
       <Outlet />
     </div>
   );
