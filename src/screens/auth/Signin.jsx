@@ -1,5 +1,5 @@
 import React from "react";
-import warrior1 from "../../assets/Warrior2.jpeg";
+import warrior1 from "../../assets/Virabhadrasana2.jpg";
 import "./styles.css";
 import { useState } from "react";
 import axios from "axios";
