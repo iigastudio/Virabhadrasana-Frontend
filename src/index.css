@@ -37,12 +37,21 @@ body {
   line-height: 1.8;
 }
 
+a:active {
+  color: white;
+}
+
+a[tabindex]:focus {
+  color:white;
+  outline: none;
+}
 .btnclick:hover {
   box-shadow: 0 0 5px var(--clr-secondary);
 }
 .btnclick:active {
   opacity: 0.6;
 }
+.pointer:hover{cursor: pointer;}
 
 /* Make images easier to work with */
 img,

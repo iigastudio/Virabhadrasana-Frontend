@@ -1,11 +1,19 @@
 .warrior-pose-card-container {
-  width: 28%;
-  height: 100%;
-  margin: 1%;
-  border: 1px solid black;
+  flex:1;
+  min-width: 28%;
+  margin:1%;
+color:black;
+ border:1px solid black;
+  border-radius: 10px;
   padding: 10px;
   display: flex;
+  justify-content: center;
+  align-items: center;
   flex-direction: column;
+}
+.warrior-pose-card-container:hover{
+transform: scale(1.02);
+cursor: pointer;
 }
 .variation-container {
   align-self: flex-end;
@@ -15,11 +23,34 @@
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  height: 80vh;
+  height: calc(100vh - 70px);
+  gap: 1%;
+  
 }
+
 .single-variation {
   border: 1px solid black;
   margin: 10px;
   padding: 10px;
   border-radius: 10px;
 }
+.img-container{
+  height: 50%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.imgFit{
+  height: 100%;
+  width: auto;
+  object-fit: contain;
+}
+.card-name{
+  font-weight: bold;
+  font-size: 30px;
+  text-align: center;
+  margin-top:20px
+}
+

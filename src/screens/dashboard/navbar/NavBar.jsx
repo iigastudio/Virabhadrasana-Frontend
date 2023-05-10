@@ -1,22 +1,25 @@
 import React from "react";
 import "./navbar.css";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useApp } from "../../../context/AppProvider";
+
 function NavBar() {
   const { user, logout } = useApp();
+  const navigate = useNavigate()
   return (
     <div className="navbar">
-      <Link to={"/dashboard/home"} className="nav-item">
+      <p  className="nav-item" onClick={()=>navigate("/dashboard/home")} >
         Home
-      </Link>
+      </p>
       {user && user.userRole == "ADMIN" && (
-        <Link to={"/dashboard/administration"} className="nav-item">
-          Administration
-        </Link>
+        <p  className="nav-item" onClick={()=>("/dashboard/administration")}> 
+ Administration
+        </p>
+     
       )}
-      <Link to={"/dashboard/warrior-poses"} className="nav-item">
+      <p onClick={()=>navigate("/dashboard/warrior-poses")}  className="nav-item">
         WarriorPoses
-      </Link>
+      </p>
       <div style={{ marginLeft: "auto" }}>
         {user ? (
           <div className="align-row">

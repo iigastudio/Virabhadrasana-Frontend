@@ -19,14 +19,13 @@ function Home() {
   }, []);
 
   return (
-    <div style={{ color: "black", minHeight: "100vh" }}>
-      Home
+ 
       <div className="home-big-container">
         {warriorPoses.map((pose) => (
           <WarriorPoseCard pose={pose} />
         ))}
-      </div>
-    </div>
+        </div>
+ 
   );
 }
 
