@@ -5,10 +5,12 @@ import Table from "react-bootstrap/Table";
 import axios from "axios";
 import deleteIcon from "../../../assets/delete.png"
 import edit from "../../../assets/edit.png"
+import { useNavigate } from "react-router-dom";
+
 function WarriorPoses() {
   const [warriorPoses, setWarriorPoses] = useState([]);
 
-
+const navigate = useNavigate()
   function deletePose(id){
     axios.delete("http://localhost:8090/warrior-poses/"+id).then((result)=>{fetchPoses();alert("success")}).catch((err)=>alert("Something went wrong"))
   }
@@ -27,7 +29,7 @@ function WarriorPoses() {
 
   return (
     <div style={{ color: "black" }}>
-         <Button variant="primary" style={{margin:"20px",marginLeft:"20px"}}>Add Warrior Pose</Button>
+         <Button onClick={()=>navigate('/dashboard/add-pose')} variant="primary" style={{margin:"20px",marginLeft:"20px"}}>Add Warrior Pose</Button>
       <Table striped bordered hover>
         <thead>
           <tr>
@@ -48,8 +50,7 @@ function WarriorPoses() {
                   src={el.imageUrl}
                   style={{ height: "70px", width: "70px" }}
                 />
-              </td>
-              <td ><img className="pointer edit-delete-scale" style={{height:"30px",width:"30px"}} src={edit}/></td>
+              </td><td ><img onClick={()=>{navigate("/dashboard/edit-pose",{state:{pose:el}})}} className="pointer edit-delete-scale" style={{height:"30px",width:"30px"}} src={edit}/></td>
               <td  onClick={()=>deletePose(el.id)}><img className="pointer edit-delete-scale" style={{height:"30px",width:"30px"}} src={deleteIcon}/></td>
             </tr>
           ))}
