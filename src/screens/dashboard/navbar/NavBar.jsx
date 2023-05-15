@@ -7,7 +7,7 @@ function NavBar() {
   const { user, logout } = useApp();
   const navigate = useNavigate();
   return (
-    <div className="navbar">
+    <div className="warrior-navbar">
       <p className="nav-item" onClick={() => navigate("/dashboard/home")}>
         Home
       </p>

@@ -3,13 +3,13 @@
   flex: 1;
   display: flex;
   justify-content: center;
-  background-color: white;
+ 
   align-items: center;
 }
 .authContainer {
   display: flex;
   flex-direction: row;
-  background-color: #b05d41bf;
+  
 }
 .rightSide {
   box-shadow: -29px -1px 38px -7px rgba(250, 211, 188, 0.75);

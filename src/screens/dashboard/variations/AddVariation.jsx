@@ -45,7 +45,7 @@ function fetchPoses() {
         alert('something went wrong')
         // Perform any additional error handling (e.g., show an error message)
       });
-  }
+      }
 
   return (
     <div className='add-warrior-pose-container'>

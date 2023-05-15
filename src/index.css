@@ -28,7 +28,7 @@ body {
   position: relative;
   font-family: var(--ff-primary);
   color: white;
-  background-color: white;
+  background-color: rgb(194, 193, 193);
   z-index: -1;
 }
 /* Set core body defaults */

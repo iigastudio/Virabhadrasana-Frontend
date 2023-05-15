@@ -61,7 +61,7 @@ const navigate = useNavigate()
               </td>
               <td>{el.warriorPose.name}</td>
               <td>
-                <img
+                <img onClick={()=>navigate("/dashboard/edit-variation",{state:{variation:el}})}
                   className="pointer edit-delete-scale"
                   style={{ height: "30px", width: "30px" }}
                   src={edit}

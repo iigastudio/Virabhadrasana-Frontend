@@ -16,6 +16,8 @@ import SignUp from "../screens/auth/Signup";
 import EditWarriorPose from "../screens/dashboard/warriorPoses/EditWarriorPose";
 import Variations from "../screens/dashboard/variations/Variations";
 import AddVariation from "../screens/dashboard/variations/AddVariation";
+import EditVariation from "../screens/dashboard/variations/EditVariation";
+import PoseVariations from "../screens/dashboard/home/PoseVariations";
 
 const useBrowserRouter = () => {
   const router = createBrowserRouter(
@@ -29,6 +31,7 @@ const useBrowserRouter = () => {
           <Route index element={<Home />} />
           <Route path="/dashboard/home" element={<Home />} />
           <Route path="/dashboard/add-variation" element={<AddVariation />} />
+          <Route path="/dashboard/edit-variation" element={<EditVariation />} />
           <Route path="/dashboard/add-pose" element={<AddWarriorPose />} />
           <Route path="/dashboard/edit-pose" element={<EditWarriorPose />} />
           <Route
@@ -37,6 +40,7 @@ const useBrowserRouter = () => {
           />
           <Route path="/dashboard/warrior-poses" element={<WarriorPoses />} />
           <Route path="/dashboard/variations" element={<Variations />} />
+          <Route path="/dashboard/pose-variations" element={<PoseVariations />} />
         </Route>
       </Route>
     )

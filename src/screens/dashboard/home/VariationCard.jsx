@@ -1,12 +1,12 @@
 import React from "react";
 import "./homeStyles.css";
 import { useNavigate } from "react-router-dom";
-function WarriorPoseCard({ pose }) {
-  const { name, imageUrl, variations } = pose;
+function VariationCard({ pose }) {
+  const { name, imageUrl } = pose;
   const navigate = useNavigate();
   return (
     <div
-      onClick={() => navigate("/dashboard/pose-variations",{state:{warriorPose:pose}})}
+     
       className="warrior-pose-card-container"
     >
       <div className="img-container">
@@ -17,4 +17,4 @@ function WarriorPoseCard({ pose }) {
   );
 }
 
-export default WarriorPoseCard;
+export default VariationCard;
