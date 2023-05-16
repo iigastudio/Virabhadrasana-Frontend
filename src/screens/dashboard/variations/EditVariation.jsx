@@ -7,10 +7,8 @@ function EditVariation() {
   const { variation } = location.state;
   const [name, setName] = useState(variation.name);
   const [file, setFile] = useState(null);
- 
-  const navigate = useNavigate();
- 
 
+  const navigate = useNavigate();
 
   function onSubmit() {
     const formData = new FormData();
@@ -33,7 +31,7 @@ function EditVariation() {
       .catch((error) => {
         // Handle error response
         console.error(error);
-        alert("something went wrong");
+        alert("Something went wrong");
         // Perform any additional error handling (e.g., show an error message)
       });
   }
@@ -53,7 +51,7 @@ function EditVariation() {
           onChange={(e) => setFile(e.target.files[0])}
           className="inputStyle"
         />
-       
+
         <p
           onClick={() => onSubmit()}
           className="submit-btn btnclick bg-secondary"

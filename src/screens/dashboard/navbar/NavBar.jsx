@@ -8,46 +8,36 @@ function NavBar() {
   const navigate = useNavigate();
   return (
     <div className="warrior-navbar">
-      <p className="nav-item" onClick={() => navigate("/dashboard/home")}>
-        Home
-      </p>
-      {user && user.userRole == "ADMIN" && (
-        <p className="nav-item" onClick={() => "/dashboard/administration"}>
-          Administration
-        </p>
-      )}
+      <Link to={"/dashboard/home"} className="nav-item">
+        HOME
+      </Link>
+
       {user && (
         <>
-          <p
-            onClick={() => navigate("/dashboard/warrior-poses")}
-            className="nav-item"
-          >
-            WarriorPoses
-          </p>
-          <p
-            onClick={() => navigate("/dashboard/variations")}
-            className="nav-item"
-          >
-            Variations
-          </p>
+          <Link to="/dashboard/warrior-poses" className="nav-item">
+            VIRABHADRASANA
+          </Link>
+          <Link to="/dashboard/variations" className="nav-item">
+            VARIATION
+          </Link>
         </>
       )}
       <div style={{ marginLeft: "auto" }}>
         {user ? (
           <div className="align-row">
-            <p>{user.fullName}</p>
-            <p className="nav-item" onClick={() => logout()}>
-              Logout
-            </p>
+            <Link className="nav-item" onClick={() => logout()}>
+              LOGOUT
+            </Link>
+            <p className="nav-item">{user.fullName}</p>
           </div>
         ) : (
           <div className="login-register-container">
             <Link className="nav-item" to={"/signup"}>
               {" "}
-              Register
+              REGISTER
             </Link>
             <Link className="nav-item" to={"/signin"}>
-              LogIn
+              LOGIN
             </Link>
           </div>
         )}

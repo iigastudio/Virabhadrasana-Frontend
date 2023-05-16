@@ -8,8 +8,8 @@ import edit from "../../../assets/edit.png";
 import { useNavigate } from "react-router-dom";
 function Variations() {
   const [variations, setVariations] = useState([]);
-const navigate = useNavigate()
-  
+  const navigate = useNavigate();
+
   function deletePose(id) {
     axios
       .delete("http://localhost:8090/warrior-poses/" + id)
@@ -22,9 +22,12 @@ const navigate = useNavigate()
   function fetchVariations() {
     axios
       .get("http://localhost:8090/variations/")
-      .then((result) => {console.log(result.data);setVariations(result.data)})
+      .then((result) => {
+        console.log(result.data);
+        setVariations(result.data);
+      })
       .catch((err) =>
-        alert("Something went wrong trying to fetch warrior poses")
+        alert("Something went wrong while trying to fetch Virabhadrasana")
       );
   }
 
@@ -34,10 +37,20 @@ const navigate = useNavigate()
 
   return (
     <div style={{ color: "black" }}>
-      <Button onClick={()=>navigate('/dashboard/add-variation')} variant="primary" style={{ margin: "20px", marginLeft: "20px" }}>
+      <div
+        className="addbtn pointer"
+        onClick={() => navigate("/dashboard/add-variation")}
+        variant="primary"
+        style={{ margin: "20px", marginLeft: "20px" }}
+      >
         Add variation
-      </Button>
-      <Table striped bordered hover>
+      </div>
+      <Table
+        style={{ borderColor: "rgb(108, 117, 125)" }}
+        striped
+        bordered
+        hover
+      >
         <thead>
           <tr>
             <th>#</th>
@@ -61,16 +74,21 @@ const navigate = useNavigate()
               </td>
               <td>{el.warriorPose.name}</td>
               <td>
-                <img onClick={()=>navigate("/dashboard/edit-variation",{state:{variation:el}})}
+                <img
+                  onClick={() =>
+                    navigate("/dashboard/edit-variation", {
+                      state: { variation: el },
+                    })
+                  }
                   className="pointer edit-delete-scale"
-                  style={{ height: "30px", width: "30px" }}
+                  style={{ height: "20px", width: "20px" }}
                   src={edit}
                 />
               </td>
               <td onClick={() => deletePose(el.id)}>
                 <img
                   className="pointer edit-delete-scale"
-                  style={{ height: "30px", width: "30px" }}
+                  style={{ height: "20px", width: "20px" }}
                   src={deleteIcon}
                 />
               </td>

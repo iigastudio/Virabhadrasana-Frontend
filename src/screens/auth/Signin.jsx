@@ -32,7 +32,7 @@ function SignIn() {
   return (
     <div className="authContainer">
       <div className="halfSide">
-        <img style={{ height: "80%" }} src={warrior1}></img>
+        <img style={{ height: "75%" }} src={warrior1}></img>
       </div>
       <div className="halfSide rightSide">
         <div className="authBox">
@@ -47,10 +47,7 @@ function SignIn() {
             onChange={(e) => setPassword(e.target.value)}
             className="inputStyle"
           />
-          <p
-            onClick={() => onSubmit()}
-            className="submit-btn btnclick bg-secondary"
-          >
+          <p onClick={() => onSubmit()} className="submit-btn btnclick">
             Submit
           </p>
         </div>

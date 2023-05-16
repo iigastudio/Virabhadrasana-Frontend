@@ -3,16 +3,22 @@ import "./warriorPosesStyles.css";
 import Button from "react-bootstrap/Button";
 import Table from "react-bootstrap/Table";
 import axios from "axios";
-import deleteIcon from "../../../assets/delete.png"
-import edit from "../../../assets/edit.png"
+import deleteIcon from "../../../assets/delete.png";
+import edit from "../../../assets/edit.png";
 import { useNavigate } from "react-router-dom";
 
 function WarriorPoses() {
   const [warriorPoses, setWarriorPoses] = useState([]);
 
-const navigate = useNavigate()
-  function deletePose(id){
-    axios.delete("http://localhost:8090/warrior-poses/"+id).then((result)=>{fetchPoses();alert("success")}).catch((err)=>alert("Something went wrong"))
+  const navigate = useNavigate();
+  function deletePose(id) {
+    axios
+      .delete("http://localhost:8090/warrior-poses/" + id)
+      .then((result) => {
+        fetchPoses();
+        alert("success");
+      })
+      .catch((err) => alert("Something went wrong"));
   }
   function fetchPoses() {
     axios
@@ -29,7 +35,12 @@ const navigate = useNavigate()
 
   return (
     <div style={{ color: "black" }}>
-         <Button onClick={()=>navigate('/dashboard/add-pose')} variant="primary" style={{margin:"20px",marginLeft:"20px"}}>Add Warrior Pose</Button>
+      <p
+        className="pointer addbtn"
+        onClick={() => navigate("/dashboard/add-pose")}
+      >
+        Add Warrior Pose
+      </p>
       <Table striped bordered hover>
         <thead>
           <tr>
@@ -50,13 +61,28 @@ const navigate = useNavigate()
                   src={el.imageUrl}
                   style={{ height: "70px", width: "70px" }}
                 />
-              </td><td ><img onClick={()=>{navigate("/dashboard/edit-pose",{state:{pose:el}})}} className="pointer edit-delete-scale" style={{height:"30px",width:"30px"}} src={edit}/></td>
-              <td  onClick={()=>deletePose(el.id)}><img className="pointer edit-delete-scale" style={{height:"30px",width:"30px"}} src={deleteIcon}/></td>
+              </td>
+              <td>
+                <img
+                  onClick={() => {
+                    navigate("/dashboard/edit-pose", { state: { pose: el } });
+                  }}
+                  className="pointer edit-delete-scale"
+                  style={{ height: "20px", width: "20px" }}
+                  src={edit}
+                />
+              </td>
+              <td onClick={() => deletePose(el.id)}>
+                <img
+                  className="pointer edit-delete-scale"
+                  style={{ height: "20px", width: "20px" }}
+                  src={deleteIcon}
+                />
+              </td>
             </tr>
           ))}
         </tbody>
       </Table>
-   
     </div>
   );
 }

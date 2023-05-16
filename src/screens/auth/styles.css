@@ -3,42 +3,41 @@
   flex: 1;
   display: flex;
   justify-content: center;
- 
+
   align-items: center;
 }
 .authContainer {
   display: flex;
   flex-direction: row;
-  
 }
 .rightSide {
-  box-shadow: -29px -1px 38px -7px rgba(250, 211, 188, 0.75);
-  -webkit-box-shadow: -29px -1px 38px -7px rgba(250, 211, 188, 0.75);
-  -moz-box-shadow: -29px -1px 38px -7px rgba(250, 211, 188, 0.75);
-  background-color: #fad3bc;
+  box-shadow: -29px -1px 38px -7px rgba(129, 125, 123, 0.75);
+  -webkit-box-shadow: -29px -1px 38px -7px rgba(151, 148, 147, 0.75);
+  -moz-box-shadow: -29px -1px 38px -7px rgba(109, 107, 105, 0.75);
 }
 .authBox {
-  min-height: 300px;
-  background-color: #b05d41bf;
-  padding: 20px;
+  background-color: rgb(214, 214, 214);
+  padding: 40px;
   border-radius: 15px;
   display: flex;
   width: 40%;
   padding-inline: 40px;
+
   flex-direction: column;
-  box-shadow: -2px 1px 30px 9px #b05d41bf;
-  -webkit-box-shadow: -2px 1px 30px 9px #b05d41bf;
-  -moz-box-shadow: -2px 1px 30px 9px #b05d41bf;
+  box-shadow: -2px 1px 30px 9px #868382bf;
+  -webkit-box-shadow: -2px 1px 30px 9px #878584bf;
+  -moz-box-shadow: -2px 1px 30px 9px #1b1a19bf;
   gap: 10px;
 }
 
 .inputStyle {
   border: 1px solid white;
   border-radius: 10px;
+  padding-inline: 10px;
 }
 .inputLabel {
   text-align: center;
-  color: white;
+  color: rgb(108, 117, 125);
   font-weight: bold;
 }
 .submit-btn:hover {
@@ -48,6 +47,7 @@
   height: 30px;
   width: 100%;
   align-self: center;
+  background-color: rgb(108, 117, 125);
   text-align: center;
   border-radius: 10px;
   margin-top: 20px;

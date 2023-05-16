@@ -47,18 +47,7 @@ function SignUp() {
             onChange={(e) => setPassword(e.target.value)}
             className="inputStyle"
           />
-          <label className="inputLabel" for="cars">
-            SelectRole
-          </label>
 
-          <select
-            onChange={(e) => setRole(e.target.value)}
-            name="role"
-            id="roles"
-          >
-            <option value="USER">User</option>
-            <option value="ADMIN">Admin</option>
-          </select>
           <p
             onClick={() => onSubmit()}
             className="submit-btn btnclick bg-secondary"
