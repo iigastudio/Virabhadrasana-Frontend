@@ -50,6 +50,12 @@ function SignIn() {
           <p onClick={() => onSubmit()} className="submit-btn btnclick">
             Submit
           </p>
+          <p className="inputLabel" style={{ fontSize: "14px" }}>
+            Don't have an account ?{" "}
+            <span className="pointer" onClick={() => navigate("/signup")}>
+              Sign up
+            </span>
+          </p>
         </div>
       </div>
     </div>

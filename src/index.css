@@ -1,6 +1,5 @@
 :root {
-  --clr-primary: #fad3bc;
-  --clr-secondary: rgb(176, 93, 65);
+
   --ff-primary: "Montserrat", sans-serif;
 }
 
@@ -51,7 +50,7 @@ a[tabindex]:focus {
   outline: none;
 }
 .btnclick:hover {
-  box-shadow: 0 0 5px var(--clr-secondary);
+  box-shadow: 0 0 5px grey;
 }
 .btnclick:active {
   opacity: 0.6;
@@ -99,13 +98,6 @@ select {
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
   }
-}
-
-.bg-primary {
-  background-color: var(--clr-primary);
-}
-.bg-secondary {
-  background-color: var(--clr-secondary);
 }
 
 .flex-center {

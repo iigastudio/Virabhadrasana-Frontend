@@ -9,7 +9,6 @@ import React from "react";
 import SignIn from "../screens/auth/Signin";
 import Dashboard from "../screens/dashboard/Dashboard";
 import Home from "../screens/dashboard/home/Home";
-import Administration from "../screens/dashboard/Administration";
 import WarriorPoses from "../screens/dashboard/warriorPoses/WarriorPoses";
 import AddWarriorPose from "../screens/dashboard/warriorPoses/AddWarriorPose";
 import SignUp from "../screens/auth/Signup";
@@ -34,13 +33,12 @@ const useBrowserRouter = () => {
           <Route path="/dashboard/edit-variation" element={<EditVariation />} />
           <Route path="/dashboard/add-pose" element={<AddWarriorPose />} />
           <Route path="/dashboard/edit-pose" element={<EditWarriorPose />} />
-          <Route
-            path="/dashboard/administration"
-            element={<Administration />}
-          />
           <Route path="/dashboard/warrior-poses" element={<WarriorPoses />} />
           <Route path="/dashboard/variations" element={<Variations />} />
-          <Route path="/dashboard/pose-variations" element={<PoseVariations />} />
+          <Route
+            path="/dashboard/pose-variations"
+            element={<PoseVariations />}
+          />
         </Route>
       </Route>
     )

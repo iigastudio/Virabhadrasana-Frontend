@@ -22,7 +22,7 @@ function SignUp() {
         alert("User added succesffully");
         navigate("/signin");
       })
-      .catch((err) => alert("something wrong happend"));
+      .catch((err) => alert("Something wrong happend"));
   }
   return (
     <div className="authContainer">
@@ -53,6 +53,12 @@ function SignUp() {
             className="submit-btn btnclick bg-secondary"
           >
             Submit
+          </p>
+          <p className="inputLabel" style={{ fontSize: "14px" }}>
+            Already have an account ?{" "}
+            <span className="pointer" onClick={() => navigate("/signin")}>
+              Sign in
+            </span>
           </p>
         </div>
       </div>

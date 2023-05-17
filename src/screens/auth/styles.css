@@ -3,7 +3,6 @@
   flex: 1;
   display: flex;
   justify-content: center;
-
   align-items: center;
 }
 .authContainer {
@@ -22,7 +21,6 @@
   display: flex;
   width: 40%;
   padding-inline: 40px;
-
   flex-direction: column;
   box-shadow: -2px 1px 30px 9px #868382bf;
   -webkit-box-shadow: -2px 1px 30px 9px #878584bf;

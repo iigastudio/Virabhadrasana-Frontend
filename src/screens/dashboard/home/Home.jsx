@@ -10,7 +10,7 @@ function Home() {
       .get("http://localhost:8090/warrior-poses/")
       .then((result) => setWarriorPoses(result.data))
       .catch((err) =>
-        alert("Something went wrong trying to fetch warrior poses")
+        alert("Something went wrong")
       );
   }
 
@@ -19,13 +19,11 @@ function Home() {
   }, []);
 
   return (
- 
-      <div className="home-big-container">
-        {warriorPoses.map((pose) => (
-          <WarriorPoseCard pose={pose} />
-        ))}
-        </div>
- 
+    <div className="home-big-container">
+      {warriorPoses.map((pose) => (
+        <WarriorPoseCard pose={pose} />
+      ))}
+    </div>
   );
 }
 

@@ -1,11 +1,10 @@
 import React from "react";
 import "./navbar.css";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { useApp } from "../../../context/AppProvider";
 
 function NavBar() {
   const { user, logout } = useApp();
-  const navigate = useNavigate();
   return (
     <div className="warrior-navbar">
       <Link to={"/dashboard/home"} className="nav-item">

@@ -1,7 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
-import imgupload from "../../../assets/imgupload.png";
 function AddVariation() {
   const [name, setName] = useState("");
   const [file, setFile] = useState(null);

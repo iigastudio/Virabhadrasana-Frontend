@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import "./warriorPosesStyles.css";
-import Button from "react-bootstrap/Button";
 import Table from "react-bootstrap/Table";
 import axios from "axios";
 import deleteIcon from "../../../assets/delete.png";
@@ -41,7 +40,12 @@ function WarriorPoses() {
       >
         Add Warrior Pose
       </p>
-      <Table striped bordered hover>
+      <Table
+        style={{ borderColor: "rgb(108, 117, 125)" }}
+        striped
+        bordered
+        hover
+      >
         <thead>
           <tr>
             <th>#</th>

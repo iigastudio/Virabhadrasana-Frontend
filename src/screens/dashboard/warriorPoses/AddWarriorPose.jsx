@@ -1,10 +1,11 @@
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 
 function AddWarriorPose() {
   const [name, setName] = useState("");
   const [file, setFile] = useState(null);
+  const imginputref = useRef();
   const navigate = useNavigate();
   function onSubmit() {
     const formData = new FormData();
@@ -41,7 +42,16 @@ function AddWarriorPose() {
           className="inputStyle"
         />
         <p className="inputLabel">Image</p>
+        <div
+          style={{ height: "31px", backgroundColor: "white", color: "black" }}
+          className="pointer inputStyle"
+          onClick={() => imginputref.current.click()}
+        >
+          Choose file
+        </div>
         <input
+          ref={imginputref}
+          style={{ visibility: "hidden", height: "0px", width: "0px" }}
           type="file"
           onChange={(e) => setFile(e.target.files[0])}
           className="inputStyle"

@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import "./variationsStyles.css";
-import Button from "react-bootstrap/Button";
 import Table from "react-bootstrap/Table";
 import axios from "axios";
 import deleteIcon from "../../../assets/delete.png";

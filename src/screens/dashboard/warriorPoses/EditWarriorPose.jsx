@@ -1,58 +1,69 @@
-import React, { useState } from 'react';
-import axios from 'axios';
-import { useLocation, useNavigate } from 'react-router-dom';
+import React, { useRef, useState } from "react";
+import axios from "axios";
+import { useLocation, useNavigate } from "react-router-dom";
 
 function EditWarriorPose() {
-
-  const location = useLocation()
- const pose =  location.state.pose
-const navigate = useNavigate()
- 
+  const location = useLocation();
+  const pose = location.state.pose;
+  const navigate = useNavigate();
+  const imginputref = useRef();
   const [name, setName] = useState(pose.name);
   const [file, setFile] = useState(null);
 
   function onSubmit() {
     const formData = new FormData();
-    formData.append('name', name);
-    formData.append('image', file);
+    formData.append("name", name);
+    formData.append("image", file);
 
     axios
-      .put('http://localhost:8090/warrior-poses/'+pose.id, formData, {
+      .put("http://localhost:8090/warrior-poses/" + pose.id, formData, {
         headers: {
-          'Content-Type': 'multipart/form-data',
+          "Content-Type": "multipart/form-data",
         },
       })
       .then((response) => {
         // Handle success response
         console.log(response.data);
-        alert('Success')
-        navigate('/dashboard/home')
+        alert("Success");
+        navigate("/dashboard/home");
         // Perform any additional actions (e.g., show a success message, redirect, etc.)
       })
       .catch((error) => {
         // Handle error response
         console.error(error);
-        alert('Something went wrong')
+        alert("Something went wrong");
         // Perform any additional error handling (e.g., show an error message)
       });
   }
 
   return (
-    <div className='add-warrior-pose-container'>
-      <div className='authBox'>
-        <p className='inputLabel'>Name</p>
+    <div className="add-warrior-pose-container">
+      <div className="authBox">
+        <p className="inputLabel">Name</p>
         <input
-        value={name}
+          value={name}
           onChange={(e) => setName(e.target.value)}
-          className='inputStyle'
+          className="inputStyle"
         />
-        <p className='inputLabel'>Image</p>
+        <p className="inputLabel">Image</p>
+        <div
+          style={{ height: "31px", backgroundColor: "white", color: "black" }}
+          className="pointer inputStyle"
+          onClick={() => imginputref.current.click()}
+        >
+          Choose file
+        </div>
         <input
-          type='file'
+          ref={imginputref}
+          style={{ visibility: "hidden", height: "0px", width: "0px" }}
+          type="file"
           onChange={(e) => setFile(e.target.files[0])}
-          className='inputStyle'
+          className="inputStyle"
         />
-        <p onClick={() => onSubmit()} className='submit-btn btnclick bg-secondary'>
+        <p
+          onClick={() => onSubmit()}
+          className="submit-btn btnclick bg-secondary"
+        >
           Submit
         </p>
       </div>
