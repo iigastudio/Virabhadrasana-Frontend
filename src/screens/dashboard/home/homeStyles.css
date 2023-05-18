@@ -3,13 +3,14 @@
   flex-basis: 30%;
   max-width: 30%;
   margin: 1%;
-  background-color: rgba(154, 80, 80, 0.153);
+  background-color: white;
   color: rgba(66, 66, 66, 0.396);
   border: 5px groove rgba(41, 41, 41, 0.2);
   border-radius: 10px;
   padding: 10px;
+  padding-bottom: 40px;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   flex-direction: column;
 }
@@ -36,15 +37,15 @@
   border-radius: 10px;
 }
 .img-container {
-  height: 60%;
+  height: 65%;
 
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-end;
 }
 
 .imgFit {
-  height: 100%;
+  max-height: 100%;
   width: auto;
   object-fit: contain;
 }

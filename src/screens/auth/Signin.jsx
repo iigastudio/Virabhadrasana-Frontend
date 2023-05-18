@@ -51,7 +51,7 @@ function SignIn() {
             Submit
           </p>
           <p className="inputLabel" style={{ fontSize: "14px" }}>
-            Don't have an account ?{" "}
+            Don't have an account?{" "}
             <span className="pointer" onClick={() => navigate("/signup")}>
               Sign up
             </span>

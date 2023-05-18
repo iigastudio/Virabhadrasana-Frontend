@@ -24,7 +24,6 @@ export const AppProvider = ({ children }) => {
       value={{
         login,
         logout,
-
         user,
       }}
     >

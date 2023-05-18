@@ -1,5 +1,4 @@
 :root {
-
   --ff-primary: "Montserrat", sans-serif;
 }
 
@@ -14,11 +13,11 @@
   display: flex;
   flex-direction: row;
   gap: 15px;
-} /* Set core root defaults */
+}
+/* Set core root defaults */
 html:focus-within {
   scroll-behavior: smooth;
 }
-
 html,
 root,
 body {

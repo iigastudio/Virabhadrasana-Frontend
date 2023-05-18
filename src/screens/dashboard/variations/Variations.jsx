@@ -39,7 +39,6 @@ function Variations() {
       <div
         className="addbtn pointer"
         onClick={() => navigate("/dashboard/add-variation")}
-        variant="primary"
         style={{ margin: "20px", marginLeft: "20px" }}
       >
         Add variation
