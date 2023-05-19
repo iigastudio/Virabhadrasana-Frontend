@@ -11,7 +11,7 @@ function Variations() {
 
   function deletePose(id) {
     axios
-      .delete("http://localhost:8090/warrior-poses/" + id)
+      .delete("http://localhost:8090/variations/" + id)
       .then((result) => {
         fetchVariations();
         alert("success");
@@ -41,7 +41,7 @@ function Variations() {
         onClick={() => navigate("/dashboard/add-variation")}
         style={{ margin: "20px", marginLeft: "20px" }}
       >
-        Add variation
+        ADD VARIATION
       </div>
       <Table
         style={{ borderColor: "rgb(108, 117, 125)" }}
@@ -52,9 +52,9 @@ function Variations() {
         <thead>
           <tr>
             <th>#</th>
-            <th>Name</th>
+            <th>Virabhadrasana</th>
+            <th>Variation</th>
             <th>Image</th>
-            <th>Warrior Pose Name</th>
             <th>Edit</th>
             <th>Delete</th>
           </tr>
@@ -63,6 +63,7 @@ function Variations() {
           {variations.map((el, i) => (
             <tr>
               <td>{i + 1}</td>
+              <td>{el.warriorPose.name}</td>
               <td>{el.name}</td>
               <td>
                 <img
@@ -70,7 +71,7 @@ function Variations() {
                   style={{ height: "70px", width: "70px" }}
                 />
               </td>
-              <td>{el.warriorPose.name}</td>
+
               <td>
                 <img
                   onClick={() =>

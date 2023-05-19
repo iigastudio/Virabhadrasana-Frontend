@@ -38,7 +38,7 @@ function WarriorPoses() {
         className="pointer addbtn"
         onClick={() => navigate("/dashboard/add-pose")}
       >
-        Add Warrior Pose
+        ADD VIRABHADRASANA
       </p>
       <Table
         style={{ borderColor: "rgb(108, 117, 125)" }}
@@ -49,7 +49,7 @@ function WarriorPoses() {
         <thead>
           <tr>
             <th>#</th>
-            <th>Name</th>
+            <th>Virabhadrasana</th>
             <th>Image</th>
             <th>Edit</th>
             <th>Delete</th>
