@@ -34,17 +34,13 @@ function AddVariation() {
         },
       })
       .then((response) => {
-        // Handle success response
         console.log(response.data);
         alert("success");
         navigate("/dashboard/home");
-        // Perform any additional actions (e.g., show a success message, redirect, etc.)
       })
       .catch((error) => {
-        // Handle error response
         console.error(error);
         alert("something went wrong");
-        // Perform any additional error handling (e.g., show an error message)
       });
   }
 
@@ -78,7 +74,7 @@ function AddVariation() {
           defaultValue={""}
         >
           <option disabled value={""}>
-            Select a warrior Pose
+            Select Virabhadrasana
           </option>
           {warriorPoses.map((warrior) => (
             <option value={warrior.id}>{warrior.name}</option>

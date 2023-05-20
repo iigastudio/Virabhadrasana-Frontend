@@ -7,7 +7,6 @@ import { useApp } from "../../context/AppProvider";
 import { useNavigate } from "react-router-dom";
 function SignIn() {
   const [userName, setUserName] = useState("");
-
   const [password, setPassword] = useState("");
   const navigate = useNavigate();
   const { login } = useApp();
@@ -51,7 +50,8 @@ function SignIn() {
             Submit
           </p>
           <p className="inputLabel" style={{ fontSize: "14px" }}>
-            Don't have an account?{" "}
+            Don't have an account?
+            <br />
             <span className="pointer" onClick={() => navigate("/signup")}>
               Sign up
             </span>

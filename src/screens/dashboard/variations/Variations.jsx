@@ -35,14 +35,7 @@ function Variations() {
   }, []);
 
   return (
-    <div style={{ color: "black" }}>
-      <div
-        className="addbtn pointer"
-        onClick={() => navigate("/dashboard/add-variation")}
-        style={{ margin: "20px", marginLeft: "20px" }}
-      >
-        ADD VARIATION
-      </div>
+    <div style={{ color: "black", paddingTop: "30px" }}>
       <Table
         style={{ borderColor: "rgb(108, 117, 125)" }}
         striped
@@ -52,11 +45,11 @@ function Variations() {
         <thead>
           <tr>
             <th>#</th>
-            <th>Virabhadrasana</th>
-            <th>Variation</th>
-            <th>Image</th>
-            <th>Edit</th>
-            <th>Delete</th>
+            <th>VIRABHADRASANA</th>
+            <th>VARIATION</th>
+            <th>IMAGE</th>
+            <th>EDIT</th>
+            <th>DELETE</th>
           </tr>
         </thead>
         <tbody>

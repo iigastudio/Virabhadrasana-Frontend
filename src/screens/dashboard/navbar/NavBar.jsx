@@ -1,10 +1,16 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./navbar.css";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { useApp } from "../../../context/AppProvider";
 
 function NavBar() {
   const { user, logout } = useApp();
+  const location = useLocation();
+  const [currentPath, setCurrentPath] = useState("");
+  useEffect(() => {
+    setCurrentPath(location.pathname);
+  }, [location.pathname]);
+
   return (
     <div className="warrior-navbar">
       <Link to={"/dashboard/home"} className="nav-item">
@@ -13,12 +19,34 @@ function NavBar() {
 
       {user && (
         <>
-          <Link to="/dashboard/warrior-poses" className="nav-item">
-            VIRABHADRASANA
-          </Link>
-          <Link to="/dashboard/variations" className="nav-item">
-            VARIATION
-          </Link>
+          {currentPath == "/dashboard/warrior-poses" ? (
+            <>
+              <Link to="/dashboard/warrior-poses" className="nav-item">
+                VIRABHADRASANA
+              </Link>
+              <Link to="/dashboard/add-pose" className="nav-item">
+                ADD VIRABHADRASANA
+              </Link>
+            </>
+          ) : currentPath == "/dashboard/variations" ? (
+            <>
+              <Link to="/dashboard/variations" className="nav-item">
+                VARIATION
+              </Link>
+              <Link to="/dashboard/add-variation" className="nav-item">
+                ADD VARIATION
+              </Link>
+            </>
+          ) : (
+            <>
+              <Link to="/dashboard/warrior-poses" className="nav-item">
+                VIRABHADRASANA
+              </Link>
+              <Link to="/dashboard/variations" className="nav-item">
+                VARIATION
+              </Link>
+            </>
+          )}
         </>
       )}
       <div style={{ marginLeft: "auto" }}>

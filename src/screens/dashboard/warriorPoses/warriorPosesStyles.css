@@ -24,8 +24,7 @@
   width: 250px;
   background-color: rgba(41, 41, 41, 0.2);
   margin: 20px;
-  display:block;
-  /*margin-left: 300px;*/
+  display: block;
   font-weight: bold;
   box-shadow: inset;
   padding: 5px;

@@ -8,7 +8,6 @@ import { useNavigate } from "react-router-dom";
 
 function WarriorPoses() {
   const [warriorPoses, setWarriorPoses] = useState([]);
-
   const navigate = useNavigate();
   function deletePose(id) {
     axios
@@ -33,13 +32,8 @@ function WarriorPoses() {
   }, []);
 
   return (
-    <div style={{ color: "black" }}>
-      <p
-        className="pointer addbtn"
-        onClick={() => navigate("/dashboard/add-pose")}
-      >
-        ADD VIRABHADRASANA
-      </p>
+    <div style={{ color: "black",paddingTop:"30px" }}>
+  
       <Table
         style={{ borderColor: "rgb(108, 117, 125)" }}
         striped
@@ -49,10 +43,10 @@ function WarriorPoses() {
         <thead>
           <tr>
             <th>#</th>
-            <th>Virabhadrasana</th>
-            <th>Image</th>
-            <th>Edit</th>
-            <th>Delete</th>
+            <th>VIRABHADRASANA</th>
+            <th>IMAGE</th>
+            <th>EDIT</th>
+            <th>DELETE</th>
           </tr>
         </thead>
         <tbody>

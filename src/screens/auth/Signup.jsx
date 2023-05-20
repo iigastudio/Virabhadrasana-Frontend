@@ -58,7 +58,8 @@ function SignUp() {
             className="inputLabel"
             style={{ fontSize: "14px", marginInline: "-10px" }}
           >
-            Already have an account?{" "}
+            Already have an account?
+            <br />
             <span className="pointer" onClick={() => navigate("/signin")}>
               Sign in
             </span>

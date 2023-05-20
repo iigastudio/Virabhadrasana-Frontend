@@ -19,17 +19,13 @@ function AddWarriorPose() {
         },
       })
       .then((response) => {
-        // Handle success response
         console.log(response.data);
         alert("success");
         navigate("/dashboard/home");
-        // Perform any additional actions (e.g., show a success message, redirect, etc.)
       })
       .catch((error) => {
-        // Handle error response
         console.error(error);
         alert("Something went wrong");
-        // Perform any additional error handling (e.g., show an error message)
       });
   }
 
