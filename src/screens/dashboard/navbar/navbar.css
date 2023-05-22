@@ -1,5 +1,7 @@
 .warrior-navbar {
   width: "100%";
+  position: relative;
+  z-index: 10;
   height: 80px;
   background-color: rgb(214, 214, 214);
   box-shadow: 0px 5px 7px -1px rgba(112, 109, 109, 0.75);

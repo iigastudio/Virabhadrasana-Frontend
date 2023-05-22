@@ -17,7 +17,7 @@
 .authBox {
   background-color: rgb(214, 214, 214);
   padding: 40px;
-  border-radius: 15px;
+  border-radius: 1px;
   display: flex;
   width: 300px;
   padding-inline: 40px;
@@ -30,7 +30,7 @@
 
 .inputStyle {
   border: 1px solid white;
-  border-radius: 10px;
+  border-radius: 1px;
   padding-inline: 10px;
 }
 .inputLabel {
@@ -47,7 +47,7 @@
   align-self: center;
   background-color: rgb(108, 117, 125);
   text-align: center;
-  border-radius: 10px;
+  border-radius: 1px;
   margin-top: 20px;
   font-weight: bold;
 }
